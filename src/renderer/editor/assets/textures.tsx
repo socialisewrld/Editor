@@ -135,7 +135,7 @@ export class TextureAssets extends AbstractAssets {
             this.updateAssetObservable.notifyObservers();
             */
            
-            if (!texture.name) {
+            if (!texture.name || texture.name.indexOf("data:") === 0) {
                 continue;
             }
             
